@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, Github, Linkedin, Code, Briefcase, Award, GraduationCap, ExternalLink } from 'lucide-react';
+import profileImage from './assets/image.jpg'; // ✅ added image import
 
 export default function Portfolio() {
   const projects = [
@@ -97,7 +98,7 @@ export default function Portfolio() {
         </div>
 
         <div className="relative container mx-auto px-6 py-32">
-          <div className="max-w-6xl flex flex-col md:flex-row items-center gap-12">
+          <div className="max-w-7xl flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 space-y-8">
               <div className="flex items-center gap-8">
                 {/* Profile Image - Desktop */}
@@ -105,7 +106,7 @@ export default function Portfolio() {
                   <div className="relative w-32 h-32">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl transform rotate-6"></div>
                     <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl overflow-hidden border-4 border-white shadow-2xl flex items-center justify-center">
-                      <span className="text-5xl font-bold text-white">LK</span>
+                      <img src={profileImage} alt="Lakshman Kumar" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -125,35 +126,35 @@ export default function Portfolio() {
                 <div className="relative w-40 h-40">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl transform rotate-6"></div>
                   <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl overflow-hidden border-4 border-white shadow-2xl flex items-center justify-center">
-                    <span className="text-6xl font-bold text-white">LK</span>
+                    <img src={profileImage} alt="Lakshman Kumar" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
 
-            <p className="text-lg text-gray-200 max-w-2xl leading-relaxed">
-              Motivated and highly adaptable software professional, eager to apply programming knowledge,
-              collaborate effectively, and contribute to impactful solutions in a dynamic work environment.
-            </p>
+              <p className="text-lg text-gray-200 max-w-3xl leading-relaxed">
+                Motivated and highly adaptable software professional, eager to apply programming knowledge,
+                collaborate effectively, and contribute to impactful solutions in a dynamic work environment.
+              </p>
 
-            {/* Contact Links */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <a href="mailto:nimmagaddalakshmankumar@gmail.com" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
-                <Mail size={20} />
-                <span>Email Me</span>
-              </a>
-              <a href="tel:+919381803663" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
-                <Phone size={20} />
-                <span>Call</span>
-              </a>
-              <a href="https://www.linkedin.com/in/lakshman-kumar-nimmagadda/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
-                <Linkedin size={20} />
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/Lakshman778" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
-                <Github size={20} />
-                <span>GitHub</span>
-              </a>
-            </div>
+              {/* Contact Links */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <a href="mailto:nimmagaddalakshmankumar@gmail.com" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
+                  <Mail size={20} />
+                  <span>Email Me</span>
+                </a>
+                <a href="tel:+919381803663" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
+                  <Phone size={20} />
+                  <span>Call</span>
+                </a>
+                <a href="https://www.linkedin.com/in/lakshman-kumar-nimmagadda/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
+                  <Linkedin size={20} />
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Lakshman778" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-all duration-300 text-white font-medium shadow-lg">
+                  <Github size={20} />
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -167,7 +168,7 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold text-gray-900">Education</h2>
           </div>
 
-          <div className="max-w-4xl space-y-6">
+          <div className="max-w-7xl mx-auto space-y-6">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start justify-between gap-6 mb-4">
                 <div className="flex-1">
@@ -207,7 +208,7 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold text-gray-900">Experience</h2>
           </div>
 
-          <div className="max-w-4xl space-y-8">
+          <div className="max-w-7xl mx-auto space-y-8">
             {experience.map((exp, idx) => (
               <div key={idx} className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6 gap-4">
@@ -243,7 +244,7 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold text-gray-900">Featured Projects</h2>
           </div>
 
-          <div className="max-w-6xl grid md:grid-cols-2 gap-8">
+          <div className="max-w-full grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 flex flex-col">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
@@ -286,7 +287,7 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold text-gray-900">Technical Skills</h2>
           </div>
 
-          <div className="max-w-5xl grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             {Object.entries(skills).map(([category, items]) => (
               <div key={category} className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">{category}</h3>
@@ -311,7 +312,7 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold text-gray-900">Certifications</h2>
           </div>
 
-          <div className="max-w-4xl grid md:grid-cols-2 gap-6">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
             {certifications.map((cert, idx) => (
               <div key={idx} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start gap-4">
